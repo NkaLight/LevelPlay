@@ -178,6 +178,7 @@
   display: flex;
   margin-top:40px;
   font-size: medium;
+  cursor: pointer;
 }
 .gamecontent-func-endGame{
   margin-right:30px;
