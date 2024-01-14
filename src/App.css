@@ -1,0 +1,276 @@
+
+.App{
+  height:100%;
+  padding:0px;
+  margin: 0px;
+  
+}
+.navbar{
+  display: flex;
+  padding-top: 0px;
+  padding: 10px;
+  height: 90px;
+  background-color: black;
+  
+}
+.navbar--title{
+  height: 100%;
+  color:#868686;
+  padding: 10px;
+}
+.navbar--login-status{
+  height: 100%;
+  color:white;
+  padding: 20px;
+  padding-top:30px;
+  margin-left:auto;
+  opacity: 0.9;
+  width:fit-content;
+  height:fit-content;
+}
+.navbar--login-status:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+.hr{
+  color:#000000;
+  background-color: #000000;
+}
+
+.mainContent{
+  height: fit-content;
+  width:100%;
+  padding: 15px;
+  padding-bottom: 250px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color: white;
+}
+.upperContent{
+  padding: 20px;
+}
+
+.upperContent--title{
+  padding-bottom: 10px;
+  
+}
+.upperContent--gameplay{
+  margin-bottom:40px;
+}
+.upperContent-main-btn{
+  background-color: #BFBFBF;
+  width: 186px;
+  text-align: center;
+  font-style: italic;
+  padding:15px;
+  border-radius: 13px;
+  margin:0px auto;
+  opacity: 0.7;
+}
+.upperContent-main-btn:hover{
+  opacity: 1;
+  padding:16px;
+  cursor: pointer;
+}
+.upperContent-btns{
+  margin-top:40px;
+  margin-left:20px;
+}
+
+.generic-black-btn{
+  padding: 10px;
+  margin: 10px;
+  width:fit-content;
+  background-color: black;
+  color:white;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+.generic-black-btn:hover{
+  opacity: 1;
+  padding: 11px;
+  cursor: pointer;
+}
+
+.upperContent--hr{
+  width:50%;
+  border: 1px solid black;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.form--input{
+  padding:20px;
+  margin:10px;
+  color:white;
+  background-color: black;
+  border:none;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+.form--input::placeholder{
+  color:white;
+  opacity: 0.9;
+}
+.form--submit{
+  margin-top:auto;
+  margin-bottom: auto;
+}
+.form--submit:hover{
+    text-decoration: underline;
+}
+.form--alert{
+  color:red;
+}
+.gamecontent{
+  display: block;
+}
+.gamecontent--users{
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 400;
+}
+.gamecontent--score{
+  display: flex;
+}
+.gamecontent--points{
+  margin-left:25%;
+  margin-top:0px;
+  font-size: xxx-large;
+}
+.gamecontent--userPoints{
+  margin-left: auto;
+  margin-right:25%;
+  margin-top:0px;
+  font-size: xxx-large;
+}
+
+.genric-btn{
+  padding:20px;
+  margin-top:50px;
+  width: fit-content;
+  background-color: lightgrey;
+  border-radius: 15px;;
+}
+.board{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+.game-status{
+  margin-left:20px;
+}
+
+.square {
+  font-size: 24px;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  background-color: white;
+  border: 2px solid black ;
+  cursor: pointer;
+}
+
+/* Add styles for different players */
+.square.X {
+  color: #F00;
+}
+
+.square.O {
+  color: #00F;
+}
+.popup {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#979797;
+  z-index: 1;
+  border-radius: 7px;
+  padding-bottom:30px;
+  padding-top:10px;
+  margin-top: 10px;
+
+}
+
+.popup-content {
+  text-align: right;
+  
+}
+.popup-title{
+  text-align: center;
+}
+
+.close {
+  top: 10px;
+  right: 10px;
+  font-size: 50px;
+  cursor: pointer;
+  text-align: left;
+  margin:0px;
+  padding: 0px;
+  margin-right:5%;
+  
+  
+}
+
+li:hover{
+  text-decoration: underline;
+}
+
+li{
+  margin-bottom:10px;
+}
+.Friends--automatch{
+  text-align: left;
+  margin-left: 40px;
+  font-size: large;
+  background-color: rgb(119, 116, 116);
+  width:fit-content;
+  padding:10px;
+  border-radius: 9px;
+  font-style: italic;
+}
+.Friends--automatch:hover{
+  padding:11px
+}
+
+
+.footer{
+  height: 80px;
+  color:white;
+  display: block;
+  text-align: center;
+  padding-bottom:100px;
+}
+.footer--title{
+  /**/
+}
+.footer--copy{
+  font-weight: lighter;
+}
+.footer--contents{
+  display: inline-block;
+  padding-left: 35px;
+}
+.footer--contents:hover{
+  text-decoration: underline;
+}
+
