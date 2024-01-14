@@ -151,6 +151,30 @@
   margin-top:0px;
   font-size: xxx-large;
 }
+.gamecontent-func{
+  display: flex;
+  margin-top:40px;
+  font-size: medium;
+  cursor: pointer;
+}
+.gamecontent-func-endGame{
+  margin-right:30px;
+  color:red;
+}
+.gamecontent-func-endGame:hover{
+  text-decoration: underline;
+}
+.gamecontent-func-restartGame{
+  margin-right:30px;
+  color:orange;
+}
+.gamecontent-func-restartGame:hover{
+  text-decoration: underline;
+}
+.game{
+  width: max-content;
+}
+
 
 .genric-btn{
   padding:20px;
@@ -175,27 +199,6 @@
 .game-status{
   margin-left:20px;
 }
-.gamecontent-func{
-  display: flex;
-  margin-top:40px;
-  font-size: medium;
-  cursor: pointer;
-}
-.gamecontent-func-endGame{
-  margin-right:30px;
-  color:red;
-}
-.gamecontent-func-endGame:hover{
-  text-decoration: underline;
-}
-.gamecontent-func-restartGame{
-  margin-right:30px;
-  color:orange;
-}
-.gamecontent-func-restartGame:hover{
-  text-decoration: underline;
-}
-
 
 .square {
   font-size: 24px;
@@ -273,6 +276,7 @@ li{
 .Friends--automatch:hover{
   padding:11px
 }
+
 
 .footer{
   height: 80px;
