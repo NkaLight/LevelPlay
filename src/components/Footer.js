@@ -23,7 +23,7 @@ export default function Footer(){
     }
     return(
         <div className="footer">
-            <h2 className="footer--title">LevelPay</h2>
+            <h2 className="footer--title">LevelPlay</h2>
             <p className="footer--copy">Copyright &copy; 2023 LevelPlay.</p>
             <p className="footer--contents" onClick={ContactUs}>Contact us</p>
             <p className="footer--contents" onClick={viewPrivacyPolicyPDF}>Privacy Policy</p>
