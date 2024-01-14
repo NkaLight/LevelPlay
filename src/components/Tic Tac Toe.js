@@ -1,6 +1,6 @@
 import React from "react";
 
-const TicTacToe = () => {
+const TicTacToe = (props) => {
     // Initialize the game board as an array
     const [board, setBoard] = React.useState(Array(9).fill(null));
     const [xIsNext, setXIsNext] = React.useState(true); // To track whose turn it is (X or O)
@@ -75,6 +75,8 @@ const TicTacToe = () => {
     status = `Next player: ${xIsNext ? 'X' : 'O'}`;
   }else if(!winner && count === 9){
     status = "Draw"
+  }else if(props.gameEnded){
+    status = "Game ended start new game."
   }
 
   return (

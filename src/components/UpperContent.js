@@ -31,7 +31,7 @@ export default function UpperContent(props){
                 </div> :
 
                 <div className="upperContent--gameplay">
-                    <div className="upperContent-main-btn" onClick={handleAddFriend}>Add a friend</div>
+                    <div className="upperContent-main-btn" onClick={handleAddFriend}>play a friend</div>
                     <div className="upperContent-btns">
                         <div className="generic-black-btn" onClick={handleAddFriend}>FRIENDS</div>
                         <div className="generic-black-btn" onClick={autoMatch}>AUTOMATCH</div>  

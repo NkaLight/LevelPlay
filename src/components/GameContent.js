@@ -18,6 +18,10 @@ export default function GameContent(props){
             </div>
             <div className="board">
                 <TicTacToe/>
+                <div className="gamecontent-func">
+                    <p className="gamecontent-func-endGame">End Game</p>
+                    <p className="gamecontent-func-restartGame">Restart Game</p>
+                </div>
             </div>
             
         </div>

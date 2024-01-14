@@ -22,15 +22,6 @@ export default function Friends(props){
             <li>Friend 3</li>
             <li>Friend 4</li>
         </ul>
-        <hr className="upperContent--hr"/>
-        <h2 className="popup-title">TOURNAMENT</h2>
-        <p className="Friends--automatch">AutoMatch</p>
-        <ul style={styles} className="list">
-            <li>Friend 1</li>
-            <li>Friend 2</li>
-            <li>Friend 3</li>
-            <li>Friend 4</li>
-        </ul>
       </div>
     </div>
   );
