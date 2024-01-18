@@ -50,7 +50,7 @@ const TicTacToe = (props) => {
     // Render the game board
   const renderSquare = (index) => {
 
-        /**Selectively render certain sides of the borders, basde on 
+        /**Selectively render certain sides of the borders, based on 
          * the index of each square to achieve design specifications */
         const styles = {
             borderTop: (index !== 0 && index !== 1 && index !== 2) ? "flex" : "none",
@@ -71,8 +71,9 @@ const TicTacToe = (props) => {
   
   if (winner) {
     status = `Winner: ${winner}`;
+    props.updatePoints(winner)
   } else if( !winner && count < 9) {
-    status = `Next player: ${xIsNext ? 'X' : 'O'}`;
+    status = `Next player: ${xIsNext ? 'you' : 'opponent'}`;
   }else if(!winner && count === 9){
     status = "Draw"
   }else if(props.gameEnded){

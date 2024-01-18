@@ -114,10 +114,28 @@
   border-radius: 10px;
   font-size: larger;
   font-weight: bold;
+  border:none
 }
 .form--input::placeholder{
   color:white;
   opacity: 0.9;
+}
+form img{
+  display: flex;
+  width:40px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 35px;
+  margin-left:275px;
+  color:white;
+  cursor: pointer;
+}
+.form-password-container{
+  display: flex;
+}
+.form p{
+  padding:20px;
+  margin:0px 10px;
 }
 .form--submit{
   margin-top:auto;
@@ -163,6 +181,7 @@
 }
 .gamecontent-func-endGame:hover{
   text-decoration: underline;
+  font-weight: bold;
 }
 .gamecontent-func-restartGame{
   margin-right:30px;
@@ -170,6 +189,7 @@
 }
 .gamecontent-func-restartGame:hover{
   text-decoration: underline;
+  font-weight: bold;
 }
 .game{
   width: max-content;
@@ -298,4 +318,7 @@ li{
 .footer--contents:hover{
   text-decoration: underline;
 }
+
+
+
 

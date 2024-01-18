@@ -1,4 +1,6 @@
-import React from "react";
+import React from "react"
+import eyeClose from "../assets/eyesAway.svg"
+import eyeOpen from "../assets/eyesOn.svg"
 
 export default function Form(props){
 
@@ -11,10 +13,15 @@ export default function Form(props){
     })
 
     const [alert, showAlert] = React.useState(false)
+    const [validPassword, setValidPassword] = React.useState(true)
+    const [showPassword, setShowPassword] = React.useState(false)
+    const [showImage, setShowImage] = React.useState(false)
 
   
-
-
+    //functions handles logic to showpassword tect 
+    function handleTogglePassword(){
+        setShowPassword(prevState => !prevState)
+    }
     function handleChange(event){
         setFormData(prevState =>{
             if(event.target.name === "confirmPassWord"){
@@ -24,7 +31,21 @@ export default function Form(props){
                 }else{
                     showAlert(false)
                 }
-            }else{
+            }else if(event.target.name === "password"){
+                //dynamically rendering an alert to prompt the user to use a strong password.
+                if(event.target.value.length === 0){
+                    setShowImage(false)
+                }else{
+                    setShowImage(true)
+                }
+                const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+                if(!passwordRegex.test(event.target.value) && event.target.value.length > 0){
+                    setValidPassword(false)
+                }else{
+                    setValidPassword(true)
+                }
+            }
+            else{
                 showAlert(false)
             }
             return{
@@ -48,7 +69,6 @@ export default function Form(props){
     function handleContinueAsGuest(){
         props.updateGameInitiated()
     }
-   
 
     return(
         <form className="form">
@@ -60,6 +80,7 @@ export default function Form(props){
                     onChange={handleChange}
                     className="form--input"
                     placeholder={props.login ? "Username" : "Create username"}
+                    maxLength={50}
                 />
                  {!props.login && 
                     <input
@@ -70,18 +91,24 @@ export default function Form(props){
                         onChange={handleChange}
                         className="form--input"
                         placeholder="Email"
+                        maxLength={250}
                     />
                  }
+                <div className="form-password-container">
                 <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    className="form--input"
-                    placeholder="Password"
-                /> 
-                 
+                type={showPassword ? "text" : "password" }
+                name="password"
+                id="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="form--input"
+                placeholder="Password"
+                maxLength={100}
+                />
+                {showImage && <img type="form-password-btn" alt="" onClick={handleTogglePassword} src={showPassword ? eyeOpen : eyeClose}/>}
+                </div>
+
+                {!validPassword && <p className="form--alert">Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, a digit, and a special character.</p>}
                  {!props.login &&
                     <input
                         type="password"
@@ -91,8 +118,10 @@ export default function Form(props){
                         onChange={handleChange}
                         className="form--input"
                         placeholder="Confirm password"
-                    />
+                        maxLength={100}
+                    /> 
                  }
+                
                 <br/>
                 {alert && <strong className="form--alert">passwords dont match</strong>}
                 <br/>

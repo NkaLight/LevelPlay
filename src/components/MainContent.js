@@ -17,14 +17,28 @@ export default function MainContent(props){
 
     const [isPopupOpen, setPopupOpen] = React.useState(false)
 
-    function updateData(){
-        setData(prevState =>{
+    // function updateData(){
+    //     setData(prevState =>{
+    //         return{
+    //             ...prevState,
+    //             /**This code needs to be updated when the add friend button
+    //              *  and that section has functionality. */
+    //             userName:"Username-Example",
+    //             opponent:"Opponent Username"
+    //         }
+    //     })
+    // }
+    function updatePoints(winner){
+        setData(prevState=>{
+            if(winner === 'X'){
+                return{
+                    ...prevState,
+                    userNamePoints: prevState.userNamePoints++
+                }
+            }
             return{
                 ...prevState,
-                /**This code needs to be updated when the add friend button
-                 *  and that section has functionality. */
-                userName:"Username-Example",
-                opponent:"Opponent Username"
+                opponentPoints: prevState.opponentPoints++
             }
         })
     }
@@ -69,6 +83,7 @@ export default function MainContent(props){
                 userName={data.userName}
                 userNamePoints={data.userNamePoints}
                 /*updateData={() => updateData(typeData)}*/
+                updatePoints = {(winner) => updatePoints()}
            />
            )}
         </>
